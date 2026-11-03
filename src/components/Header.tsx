@@ -10,11 +10,11 @@ export function Header() {
           VR
         </a>
         <div className="site-header__right">
-          <nav aria-label="Main">
+          <nav aria-label={t.nav.label}>
             <ul className="nav">
               <li><a href="#work">{t.nav.work}</a></li>
               <li><a href="#about">{t.nav.about}</a></li>
-              <li><a href="#contact">{t.nav.contact}</a></li>
+              <li className="nav-link--always"><a href="#contact">{t.nav.contact}</a></li>
             </ul>
           </nav>
           <LangToggle />

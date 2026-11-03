@@ -12,7 +12,7 @@ export function ProjectLinks({ project, featured = false }: { project: Project; 
     <div className="project-links">
       {project.links.map((l) => (
         <a key={l.kind} href={l.href} target="_blank" rel="noopener noreferrer">
-          {labels[l.kind]} ↗
+          {labels[l.kind]} <span aria-hidden="true">↗</span>
         </a>
       ))}
     </div>

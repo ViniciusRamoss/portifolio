@@ -81,4 +81,33 @@ describe('App', () => {
     expect(after).toHaveLength(before.length)
     after.forEach((text, i) => expect(text).not.toBe(before[i]))
   })
+
+  it('keeps a Contact nav link that stays visible on phones', () => {
+    render(<App />)
+    const link = within(screen.getByRole('navigation')).getByRole('link', { name: en.nav.contact })
+    expect(link).toHaveAttribute('href', '#contact')
+    expect(link.closest('li')).toHaveClass('nav-link--always')
+  })
+
+  it('uses a translated nav label and h1 > h2 > h3 heading order', async () => {
+    render(<App />)
+    expect(screen.getByRole('navigation', { name: en.nav.label })).toBeInTheDocument()
+    const levels = screen.getAllByRole('heading').map((h) => Number(h.tagName[1]))
+    const firstH3 = levels.indexOf(3)
+    expect(levels.slice(0, firstH3)).toContain(2)
+    await userEvent.click(screen.getByRole('button', { name: 'PT' }))
+    expect(screen.getByRole('navigation', { name: pt.nav.label })).toBeInTheDocument()
+  })
+
+  it('renders no English-only stack tag in PT', async () => {
+    render(<App />)
+    await userEvent.click(screen.getByRole('button', { name: 'PT' }))
+    expect(within(screen.getByTestId('featured')).queryByText('AI agent')).toBeNull()
+  })
+
+  it('hides the arrow glyph from assistive tech', () => {
+    render(<App />)
+    const arrows = document.querySelectorAll('.project-links a [aria-hidden="true"]')
+    expect(arrows.length).toBeGreaterThan(0)
+  })
 })

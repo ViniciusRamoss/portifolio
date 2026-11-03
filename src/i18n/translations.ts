@@ -7,7 +7,7 @@ export interface Chip {
 
 export interface Translations {
   meta: { title: string }
-  nav: { work: string; about: string; contact: string }
+  nav: { label: string; work: string; about: string; contact: string }
   hero: {
     eyebrow: string
     title: string
@@ -53,7 +53,7 @@ export interface Translations {
 
 const en: Translations = {
   meta: { title: 'Vinicius Silva Ramos — Python Developer' },
-  nav: { work: 'Work', about: 'About', contact: 'Contact' },
+  nav: { label: 'Main', work: 'Work', about: 'About', contact: 'Contact' },
   hero: {
     eyebrow: 'PYTHON DEVELOPER · DJANGO · DATA & ML · AI AGENTS',
     title: 'Python that solves real problems.',
@@ -112,7 +112,7 @@ const en: Translations = {
 
 const pt: Translations = {
   meta: { title: 'Vinicius Silva Ramos — Desenvolvedor Python' },
-  nav: { work: 'Projetos', about: 'Sobre', contact: 'Contato' },
+  nav: { label: 'Principal', work: 'Projetos', about: 'Sobre', contact: 'Contato' },
   hero: {
     eyebrow: 'DESENVOLVEDOR PYTHON · DJANGO · DADOS & ML · AGENTES DE IA',
     title: 'Python que resolve problemas reais.',

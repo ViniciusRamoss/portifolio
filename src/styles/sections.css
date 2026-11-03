@@ -3,9 +3,18 @@
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
+/* blur lives on a pseudo-element so the toggle's own backdrop-filter is not trapped in a Backdrop Root */
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgba(10, 13, 23, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  pointer-events: none;
 }
 
 .site-header__inner {
@@ -58,8 +67,14 @@
 }
 
 @media (max-width: 440px) {
-  .nav {
+  .nav li:not(.nav-link--always) {
     display: none;
+  }
+  .site-header__inner {
+    gap: 8px;
+  }
+  .site-header__right {
+    gap: 10px;
   }
 }
 
