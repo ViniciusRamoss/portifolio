@@ -21,7 +21,17 @@ export interface Translations {
     github: string
     agentRepo: string
   }
-  projects: { label: string; liveDemo: string; github: string }
+  projects: {
+    label: string
+    liveDemo: string
+    github: string
+    items: {
+      taymodas: string
+      jobmatch: string
+      'fraud-detection': string
+      'sales-data-consolidation': string
+    }
+  }
   about: {
     title: string
     photoAlt: string
@@ -63,6 +73,16 @@ const en: Translations = {
     label: 'Selected projects',
     liveDemo: 'Live demo',
     github: 'GitHub',
+    items: {
+      taymodas:
+        'Clothing store catalog with stock by size and color and a WhatsApp checkout.',
+      jobmatch:
+        'Command-line tool that ranks job listings against a résumé.',
+      'fraud-detection':
+        'Fraud detection on 99.8% imbalanced data, using XGBoost with SHAP explanations.',
+      'sales-data-consolidation':
+        'Pipeline that merges ERP exports into a single Power BI sales dashboard.',
+    },
   },
   about: {
     title: 'About',
@@ -112,6 +132,16 @@ const pt: Translations = {
     label: 'Projetos selecionados',
     liveDemo: 'Demo ao vivo',
     github: 'GitHub',
+    items: {
+      taymodas:
+        'Catálogo de loja de roupas com estoque por tamanho e cor e checkout pelo WhatsApp.',
+      jobmatch:
+        'Ferramenta de linha de comando que ranqueia vagas de acordo com um currículo.',
+      'fraud-detection':
+        'Detecção de fraude em dados com 99,8% de desbalanceamento, usando XGBoost e explicações com SHAP.',
+      'sales-data-consolidation':
+        'Pipeline que consolida exportações do ERP em um único dashboard de vendas no Power BI.',
+    },
   },
   about: {
     title: 'Sobre',
