@@ -13,7 +13,7 @@ const GITHUB = 'https://github.com/ViniciusRamoss'
 export const featuredProject: Project = {
   id: 'sptaxi',
   name: 'sptaxi',
-  stack: ['React', 'TypeScript', 'Django REST', 'AI agent', 'CI'],
+  stack: ['React', 'TypeScript', 'Django REST', 'LLM', 'CI'],
   links: [
     { kind: 'github', href: `${GITHUB}/sptaxi` },
     { kind: 'agent', href: `${GITHUB}/ai-agent-sptaxi` },

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 88px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;

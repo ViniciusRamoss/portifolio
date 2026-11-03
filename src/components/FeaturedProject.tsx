@@ -12,7 +12,7 @@ export function FeaturedProject() {
           <span className="featured__preview-name">{featuredProject.name}</span>
         </div>
         <div className="featured__body">
-          <p className="eyebrow">{t.featured.label}</p>
+          <h2 className="eyebrow">{t.featured.label}</h2>
           <h3 id="featured-name" className="featured__name">{featuredProject.name}</h3>
           <p className="featured__desc">{t.featured.description}</p>
           <ul className="tags">
