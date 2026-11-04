@@ -1,0 +1,18 @@
+:root {
+  --bg: #0a0d17;
+  --card: #171a29;
+  --border: #33384d;
+  --ink: #F2F5FA;
+  --muted: #9EA8BD;
+  --accent: #5cd1ab;
+  --accent2: #738CFF;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --gutter: 80px;
+}
+
+@media (max-width: 699px) {
+  :root {
+    --gutter: 24px;
+  }
+}
